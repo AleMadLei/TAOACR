@@ -1,9 +1,9 @@
 name: taoacr
-recipe: drupal9
+recipe: drupal10
 config:
   webroot: /web
-  php: "8.0"
-  composer_version: "2.0.1"
+  php: "8.1"
+  composer_version: "2.2.18"
 services:
   appserver:
     build:
