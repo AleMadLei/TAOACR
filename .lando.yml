@@ -1,0 +1,21 @@
+name: taoacr
+recipe: drupal10
+config:
+  webroot: /web
+  php: "8.1"
+  composer_version: "2.2.18"
+services:
+  appserver:
+    build:
+      - composer install
+    overrides:
+      environment:
+        DRUSH_OPTIONS_URI: "https://taoacr.lndo.site"
+        PHP_SENDMAIL_PATH: '/usr/sbin/sendmail -S mailhog:1025'
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+proxy:
+  mailhog:
+    - mailhog.taoacr.lndo.site
