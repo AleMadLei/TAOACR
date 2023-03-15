@@ -235,7 +235,7 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+$settings['config_sync_directory'] = '../config/sync';
 
 /**
  * Settings:
@@ -813,4 +813,3 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
-//$settings['config_sync_directory'] = 'sites/default/files/config_gtp1FIZ5ctR1wKOxf-AqgcCPtCbR8MZ2iynqM062mPR2Ui4b68DlXJ8muEEVJ_k7me-t5qcgqA/sync';
