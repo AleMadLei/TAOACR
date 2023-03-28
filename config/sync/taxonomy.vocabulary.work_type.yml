@@ -1,0 +1,8 @@
+uuid: a79cf09a-3626-4b10-9eda-0b61a09d7437
+langcode: en
+status: true
+dependencies: {  }
+name: 'Work Type'
+vid: work_type
+description: ''
+weight: 0
