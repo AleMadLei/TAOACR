@@ -1,0 +1,10 @@
+uuid: bce02b0f-85bd-48f7-9bbe-54a4bf8d53b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.work_type_list
+label: 'Work Type List'
+targetEntityType: taxonomy_term
+cache: true
