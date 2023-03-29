@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.work_sample.field_media_image
-    - field.field.media.work_sample.field_w
+    - field.field.media.work_sample.field_work_type
     - image.style.large
     - media.type.work_sample
   module:
@@ -25,9 +25,16 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_work_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   created: true
-  field_w: true
   name: true
   thumbnail: true
   uid: true

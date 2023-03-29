@@ -1,29 +1,29 @@
-uuid: 9337e3bc-a96d-460f-a0d5-862daa79dc7b
+uuid: 3749b359-56ae-49ab-bb72-41b49697daa0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_w
-    - media.type.work_sample
+    - field.storage.taxonomy_term.field_image
+    - media.type.image
     - taxonomy.vocabulary.work_type
-id: media.work_sample.field_w
-field_name: field_w
-entity_type: media
-bundle: work_sample
-label: 'Work type'
+id: taxonomy_term.work_type.field_image
+field_name: field_image
+entity_type: taxonomy_term
+bundle: work_type
+label: Image
 description: ''
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:media'
   handler_settings:
     target_bundles:
-      work_type: work_type
+      image: image
     sort:
-      field: name
-      direction: asc
+      field: _none
+      direction: ASC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

@@ -1,12 +1,12 @@
-uuid: 8756b965-5903-476b-aab9-a73f6e4ce828
+uuid: 1f5483d6-582f-4e1f-b89b-cc8e93664341
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - taxonomy
-id: media.field_w
-field_name: field_w
+id: media.field_work_type
+field_name: field_work_type
 entity_type: media
 type: entity_reference
 settings:

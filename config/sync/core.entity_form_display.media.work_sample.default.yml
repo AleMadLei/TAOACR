@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.work_sample.field_media_image
-    - field.field.media.work_sample.field_w
+    - field.field.media.work_sample.field_work_type
     - image.style.thumbnail
     - media.type.work_sample
   module:
@@ -29,7 +29,7 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-  field_w:
+  field_work_type:
     type: options_select
     weight: 1
     region: content
