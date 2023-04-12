@@ -1,0 +1,22 @@
+uuid: 5330c614-9cc4-49fd-9a15-9b3046b5c8ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - taoa
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: taoa_help
+theme: taoa
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

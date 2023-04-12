@@ -1,0 +1,22 @@
+uuid: 9dae27b5-30ee-49f1-bb6a-09e67b7c08ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - taoa
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: taoa_powered
+theme: taoa
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

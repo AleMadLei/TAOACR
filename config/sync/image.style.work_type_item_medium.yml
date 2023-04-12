@@ -1,0 +1,21 @@
+uuid: 130584f7-21d5-4aeb-8e26-8381d06823fa
+langcode: en
+status: true
+dependencies: {  }
+name: work_type_item_medium
+label: 'Work Type Item - Medium'
+effects:
+  9b8c4f43-30b9-45dd-8909-b0a40e4b1215:
+    uuid: 9b8c4f43-30b9-45dd-8909-b0a40e4b1215
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 282
+      anchor: center-center
+  9f1e904a-0253-423b-a22a-7d0a825f01c2:
+    uuid: 9f1e904a-0253-423b-a22a-7d0a825f01c2
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

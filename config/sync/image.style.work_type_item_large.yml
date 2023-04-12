@@ -2,8 +2,8 @@ uuid: 42a2ae37-e899-49d9-b399-c13f7c3087e0
 langcode: en
 status: true
 dependencies: {  }
-name: work_type_item
-label: 'Work Type Item'
+name: work_type_item_large
+label: 'Work Type Item - Large'
 effects:
   0b0b8df5-64a6-4645-8ea7-0cf712cd9c6c:
     uuid: 0b0b8df5-64a6-4645-8ea7-0cf712cd9c6c

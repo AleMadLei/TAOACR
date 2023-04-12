@@ -1,0 +1,10 @@
+uuid: e52f50ef-b5c0-47ac-a083-036183b787a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.work_type_item
+label: 'Work Type Item'
+targetEntityType: media
+cache: true

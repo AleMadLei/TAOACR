@@ -1,0 +1,27 @@
+taoa.base:
+  label: mobile
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+
+taoa.sm:
+  label: small
+  mediaQuery: 'all and (min-width: 540px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+taoa.md:
+  label: tablet
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+
+taoa.lg:
+  label: screen
+  mediaQuery: 'all and (min-width: 920px)'
+  weight: 2
+  multipliers:
+    - 1x

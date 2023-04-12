@@ -1,0 +1,21 @@
+uuid: 9292e333-3a62-45c6-9d11-02c7ca569541
+langcode: en
+status: true
+dependencies: {  }
+name: work_type_item_small
+label: 'Work Type Item - Small'
+effects:
+  a5ca9e77-d9a6-4289-9745-74a54d8f7143:
+    uuid: a5ca9e77-d9a6-4289-9745-74a54d8f7143
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 113
+      anchor: center-center
+  cbd1f95f-7b29-4886-899c-631c619c4e2d:
+    uuid: cbd1f95f-7b29-4886-899c-631c619c4e2d
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp
