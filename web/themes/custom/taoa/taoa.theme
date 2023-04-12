@@ -1,0 +1,116 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function taoa_preprocess_image_widget(array &$variables) {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}
+
+
+function taoa_preprocess_taxonomy_term(array &$variables) {
+  dump('holis');
+}
+
+function taoa_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if ($hook == 'taxonomy_term' && date('N') == 2) {
+    $suggestions[] = 'taxonomy-term__tuesday';
+  }
+  else if ($hook == 'taxonomy_term' && date('N') == 5) {
+    $suggestions[] = 'taxonomy-term__tuesday';
+  }
+
+
+  if ($hook == 'taxonomy_term') {
+    if (date('N') == 2) {
+      $suggestions[] = 'taxonomy-term__tuesday';
+    }
+    else if(date('N') == 5) {
+      $suggestions[] = 'taxonomy-term__friday';
+    }
+  }
+
+  if ($hook !== 'taxonomy_term') {
+    return;
+  }
+
+  if (date('N') == 2) {
+    $suggestions[] = 'taxonomy-term__tuesday';
+    return;
+  }
+
+  if(date('N') == 5) {
+    $suggestions[] = 'taxonomy-term__friday';
+    return;
+  }
+
+
+  $check = FALSE;
+  $bundle = $entity->bundle();
+
+  if (isset($entity)) {
+    $cid = $cid_prefix . $bundle;
+
+    if ($cache = \Drupal::cache()->get($cid)) {
+      return $cache->data;
+    }
+    else {
+      if ($bundle !== 'user' && method_exists($entity, 'hasField') && $entity->hasField('field_feature')) {
+        $check = TRUE;
+      }
+    }
+    \Drupal::cache()->set($cid, $check, Cache::PERMANENT);
+  }
+  return $check;
+
+
+
+
+
+  // Early return if entity not given.
+  if (empty($entity)) {
+    return FALSE;
+  }
+
+  // Cache identifier uses the prefix plus entity type and bundle. This to try
+  // to make it unique enough.
+  $bundle = $entity->bundle();
+  $type = $entity->getEntityTypeId();
+  $cid = "{$cid_prefix}.{$type}.{$bundle}";
+
+  // Return cache value if already set.
+  if (!empty($cache = \Drupal::cache()->get($cid))) {
+    return $cache->data;
+  }
+
+  // Assumes no access check is needed.
+  // Then we need to check entity is fieldable (implements FieldableEntityInterface)
+  // and has our field to check for access.
+  $check = FALSE;
+  if ($bundle !== 'user' && method_exists($entity, 'hasField') && $entity->hasField('field_feature')) {
+    $check = TRUE;
+  }
+  \Drupal::cache()->set($cid, $check, Cache::PERMANENT);
+  return $check;
+
+
+
+
+
+
+
+
+}

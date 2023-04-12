@@ -1,0 +1,30 @@
+uuid: bbf342a2-607a-4173-8e14-a24c0d19a4c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.work_type_item_large
+    - image.style.work_type_item_medium
+    - image.style.work_type_item_small
+  theme:
+    - taoa
+id: work_type_item
+label: 'Work Type Item'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: work_type_item_large
+    breakpoint_id: taoa.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: work_type_item_medium
+    breakpoint_id: taoa.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: work_type_item_small
+    breakpoint_id: taoa.base
+    multiplier: 1x
+breakpoint_group: taoa
+fallback_image_style: work_type_item_small
