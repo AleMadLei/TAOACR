@@ -6,6 +6,8 @@ libraries:
   - taoa/base
   - taoa/messages
   - core/normalize
+  - taoa/global
+
 libraries-extend:
   user/drupal.user:
     - taoa/user

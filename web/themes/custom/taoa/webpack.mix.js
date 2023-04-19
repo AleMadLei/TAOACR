@@ -87,15 +87,6 @@ glob.sync('src/components/**/*.js').forEach((sourcePath) => {
  | Style Lint
  |--------------------------------------------------------------------------
  */
-mix.stylelint({
-	configFile: './.stylelintrc.json',
-	context: './src',
-	failOnError: false,
-	files: ['**/*.scss'],
-	quiet: false,
-	customSyntax: 'postcss-scss',
-});
-
 /*
  |--------------------------------------------------------------------------
  * IMAGES / ICONS / VIDEOS / FONTS

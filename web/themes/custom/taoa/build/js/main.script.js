@@ -9361,6 +9361,19 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+/***/ }),
+
+/***/ "./src/components/work-type/_work-type.scss":
+/*!**************************************************!*\
+  !*** ./src/components/work-type/_work-type.scss ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
 /***/ })
 
 /******/ 	});
@@ -9474,6 +9487,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/main.script": 0,
+/******/ 			"components/work-type/work-type": 0,
 /******/ 			"components/offcanvas/offcanvas": 0,
 /******/ 			"components/block/block": 0,
 /******/ 			"css/main.style": 0
@@ -9526,10 +9540,11 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/js/main.script.js")))
-/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/scss/main.style.scss")))
-/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/block/block.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/offcanvas/_offcanvas.scss")))
+/******/ 	__webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/js/main.script.js")))
+/******/ 	__webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/scss/main.style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/block/block.scss")))
+/******/ 	__webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/offcanvas/_offcanvas.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/work-type/_work-type.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
