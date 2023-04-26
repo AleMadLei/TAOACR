@@ -1,2 +1,10 @@
 // Global Sass @function declarations
 // -----------------------------------------------------------------------------
+
+$font-base: 16px;
+
+@function rem-calc($pixel) {
+  $rem: $pixel / $font-base;
+
+  @return #{$rem}rem;
+}

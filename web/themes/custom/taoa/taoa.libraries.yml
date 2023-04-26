@@ -104,8 +104,15 @@ user:
       css/components/user.css:
         weight: -10
 
+fonts:
+  css:
+    theme:
+      "https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap": { type: external, minified: true }
+
 global:
   version: VERSION
   css:
     theme:
       build/css/main.style.css: { }
+  dependencies:
+    - taoa/fonts

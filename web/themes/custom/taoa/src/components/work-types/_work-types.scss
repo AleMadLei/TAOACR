@@ -1,0 +1,5 @@
+.work-types {
+  display: grid;
+  gap: rem-calc(10px);
+  grid-template-columns: repeat(3, 1fr);
+}

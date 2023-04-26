@@ -10930,23 +10930,41 @@ textarea.form-control-lg {
   padding-left: 0;
 }
 
+.work-types .views-row {
+  display: contents;
+}
+
 .work-type {
   cursor: pointer;
   position: relative;
+}
+.work-type:hover .work-type__title, .work-type:focus .work-type__title {
+  background: rgba(222, 43, 89, 0.7);
 }
 .work-type__title {
   align-items: center;
   color: #FFF;
   display: flex;
   height: 100%;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
   justify-content: center;
   position: absolute;
   text-transform: uppercase;
+  transition: all 500ms linear;
   width: 100%;
+  z-index: 1;
 }
 .work-type__image img {
   display: block;
   width: 100%;
+}
+
+.work-types {
+  display: grid;
+  gap: 0.625rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /*# sourceMappingURL=main.style.css.map*/

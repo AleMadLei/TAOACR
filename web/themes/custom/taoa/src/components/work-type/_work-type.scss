@@ -1,16 +1,29 @@
 .work-type {
+  $this: &;
+
   cursor: pointer;
   position: relative;
+
+  &:hover, &:focus {
+    #{$this}__title {
+      background: rgba(222,43,89,0.7);
+    }
+  }
 
   &__title {
     align-items: center;
     color: #FFF;
     display: flex;
     height: 100%;
+    font-family: 'League Spartan', sans-serif;
+    font-size: rem-calc(20px);
+    font-weight: bold;
     justify-content: center;
     position: absolute;
     text-transform: uppercase;
+    transition: all 500ms linear;
     width: 100%;
+    z-index: 1;
   }
 
   &__image {
