@@ -1,6 +1,7 @@
 {
     "/js/main.script.js": "/js/main.script.js",
     "/components/block/block.js": "/components/block/block.js",
+    "/components/work-types/work-types.css": "/components/work-types/work-types.css",
     "/components/work-type/work-type.css": "/components/work-type/work-type.css",
     "/components/offcanvas/offcanvas.css": "/components/offcanvas/offcanvas.css",
     "/components/block/block.css": "/components/block/block.css",

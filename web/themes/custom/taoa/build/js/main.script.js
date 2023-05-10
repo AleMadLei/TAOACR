@@ -3312,7 +3312,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_bootstrap */ "./src/js/_bootstrap.js");
 
-(function () {
+(function ($) {
   // * Tooltip initialization, remove it if not necessary
   document.querySelectorAll('[data-toggle="tooltip"]').forEach(function (tooltipElement) {
     return new _bootstrap__WEBPACK_IMPORTED_MODULE_0__.Tooltip(tooltipElement);
@@ -3322,7 +3322,20 @@ __webpack_require__.r(__webpack_exports__);
   document.querySelectorAll('.toast').forEach(function (toastElement) {
     return new _bootstrap__WEBPACK_IMPORTED_MODULE_0__.Toast(toastElement);
   });
-})();
+  Drupal.behaviors.addWorkSampleAndWorkTypesInteraction = {
+    attach: function attach(context, settings) {
+      once('work-sample-work-type-init', '.view-work-types .taxonomy-term.work-type', document).forEach(function (t) {
+        t.addEventListener('click', function (e) {
+          var term = t.getAttribute('data-taxonomy');
+          var select = document.querySelector('.view-work-samples select[data-drupal-selector="edit-work-type"]');
+          select.value = term;
+          var button = document.querySelector('.view-work-samples .form-submit');
+          button.dispatchEvent(new MouseEvent('click'));
+        });
+      });
+    }
+  };
+})(jQuery);
 
 /***/ }),
 
@@ -9374,6 +9387,19 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+/***/ }),
+
+/***/ "./src/components/work-types/_work-types.scss":
+/*!****************************************************!*\
+  !*** ./src/components/work-types/_work-types.scss ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
 /***/ })
 
 /******/ 	});
@@ -9487,6 +9513,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/main.script": 0,
+/******/ 			"components/work-types/work-types": 0,
 /******/ 			"components/work-type/work-type": 0,
 /******/ 			"components/offcanvas/offcanvas": 0,
 /******/ 			"components/block/block": 0,
@@ -9540,11 +9567,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/js/main.script.js")))
-/******/ 	__webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/scss/main.style.scss")))
-/******/ 	__webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/block/block.scss")))
-/******/ 	__webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/offcanvas/_offcanvas.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/work-type/_work-type.scss")))
+/******/ 	__webpack_require__.O(undefined, ["components/work-types/work-types","components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/js/main.script.js")))
+/******/ 	__webpack_require__.O(undefined, ["components/work-types/work-types","components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/scss/main.style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["components/work-types/work-types","components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/block/block.scss")))
+/******/ 	__webpack_require__.O(undefined, ["components/work-types/work-types","components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/offcanvas/_offcanvas.scss")))
+/******/ 	__webpack_require__.O(undefined, ["components/work-types/work-types","components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/work-type/_work-type.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/work-types/work-types","components/work-type/work-type","components/offcanvas/offcanvas","components/block/block","css/main.style"], () => (__webpack_require__("./src/components/work-types/_work-types.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -1,0 +1,1 @@
+{"version":3,"file":"components/work-types/work-types.css","mappings":"AAAA;EACE;EACA;EACA;AACF,C","sources":["webpack://taoa/./src/components/work-types/_work-types.scss"],"sourcesContent":[".work-types {\n  display: grid;\n  gap: rem-calc(10px);\n  grid-template-columns: repeat(3, 1fr);\n}\n"],"names":[],"sourceRoot":""}

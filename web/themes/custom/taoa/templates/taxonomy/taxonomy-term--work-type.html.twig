@@ -30,7 +30,12 @@
   'work-type'
 ]
 %}
-<div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).setAttribute('tabindex', '0').addClass(classes) }}>
+<div{{ attributes
+  .setAttribute('id', 'taxonomy-term-' ~ term.id)
+  .setAttribute('tabindex', '0')
+  .setAttribute('data-taxonomy', term.id)
+  .addClass(classes)
+}}>
   {{ title_prefix }}
   <h3 class="work-type__title">{{ name }}</h3>
   {{ title_suffix }}
