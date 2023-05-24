@@ -5,6 +5,12 @@ config:
   php: "8.1"
   composer_version: "2.2.18"
 services:
+  sbdb:
+    type: mysql
+    creds:
+      user: drupal10
+      password: drupal10
+      database: drupal10
   appserver:
     build:
       - composer install
@@ -18,6 +24,13 @@ services:
     hogfrom:
       - appserver
 proxy:
+  appserver:
+    - taoacr.lndo.site
+    - taoacrenespanol.lndo.site
+    - taoacrinfrench.lndo.site
+    - espanol.taoacr.lndo.site
+    - french.taoacr.lndo.site
+    - site-builder.lndo.site
   mailhog:
     - mailhog.taoacr.lndo.site
 

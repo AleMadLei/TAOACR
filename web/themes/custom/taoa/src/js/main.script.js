@@ -26,4 +26,40 @@ import { Toast, Tooltip } from './_bootstrap';
     },
   };
 
+  Drupal.behaviors.addWorkSampleAndWorkTypesInteractionController = {
+    attach: function (context, settings) {
+      once('work-sample-work-type-controller-init', '.view-work-types .taxonomy-term.work-type', document).forEach(t => {
+        t.addEventListener('click', e => {
+          const term = t.getAttribute('data-taxonomy');
+          $.get(`/api/work-samples/${term}`, data => {
+            t
+              .closest('.view-work-types')
+              .querySelector('.samples-wrapper')
+              .innerHTML = data;
+          });
+        });
+      });
+    },
+  };
+
+  Drupal.behaviors.addWorkSampleAndWorkTypesInteractionREST = {
+    attach: function (context, settings) {
+      once('work-sample-work-type-rest-init', '.view-work-types .taxonomy-term.work-type', document).forEach(t => {
+        t.addEventListener('click', e => {
+          const term = t.getAttribute('data-taxonomy');
+          const wrapper = t
+            .closest('.view-work-types')
+            .querySelector('.samples-wrapper-2');
+          wrapper.innerHTML = '';
+
+          $.get(`/api/2/work-samples/${term}`, data => {
+            data.forEach(sample => {
+              wrapper.innerHTML += sample.rendered_entity;
+            });
+          });
+        });
+      });
+    },
+  };
+
 })(jQuery);

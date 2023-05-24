@@ -23,3 +23,12 @@ function taoa_preprocess_image_widget(array &$variables) {
 
 function taoa_preprocess_taxonomy_term(array &$variables) {
 }
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function taoa_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if ($hook == 'node') {
+    $suggestions[] = 'mi-nodo';
+  }
+}

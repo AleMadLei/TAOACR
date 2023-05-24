@@ -3335,6 +3335,34 @@ __webpack_require__.r(__webpack_exports__);
       });
     }
   };
+  Drupal.behaviors.addWorkSampleAndWorkTypesInteractionController = {
+    attach: function attach(context, settings) {
+      once('work-sample-work-type-controller-init', '.view-work-types .taxonomy-term.work-type', document).forEach(function (t) {
+        t.addEventListener('click', function (e) {
+          var term = t.getAttribute('data-taxonomy');
+          $.get("/api/work-samples/".concat(term), function (data) {
+            t.closest('.view-work-types').querySelector('.samples-wrapper').innerHTML = data;
+          });
+        });
+      });
+    }
+  };
+  Drupal.behaviors.addWorkSampleAndWorkTypesInteractionREST = {
+    attach: function attach(context, settings) {
+      once('work-sample-work-type-rest-init', '.view-work-types .taxonomy-term.work-type', document).forEach(function (t) {
+        t.addEventListener('click', function (e) {
+          var term = t.getAttribute('data-taxonomy');
+          var wrapper = t.closest('.view-work-types').querySelector('.samples-wrapper-2');
+          wrapper.innerHTML = '';
+          $.get("/api/2/work-samples/".concat(term), function (data) {
+            data.forEach(function (sample) {
+              wrapper.innerHTML += sample.rendered_entity;
+            });
+          });
+        });
+      });
+    }
+  };
 })(jQuery);
 
 /***/ }),
