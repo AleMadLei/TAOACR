@@ -1,0 +1,31 @@
+uuid: 19f528a1-ae8a-4987-9572-ada14d9f695f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_form_block
+    - field.field.block_content.contact_form_block.body
+    - field.field.block_content.contact_form_block.field_contact_form
+  module:
+    - text
+id: block_content.contact_form_block.default
+targetEntityType: block_content
+bundle: contact_form_block
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_contact_form:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

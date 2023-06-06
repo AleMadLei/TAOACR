@@ -14,10 +14,8 @@ services:
   appserver:
     build:
       - composer install
-      - cd web/sites/default && ln -s .lando.settings.php settings.local.php | true
     overrides:
       environment:
-        DRUSH_OPTIONS_URI: "https://taoacr.lndo.site"
         PHP_SENDMAIL_PATH: '/usr/sbin/sendmail -S mailhog:1025'
   mailhog:
     type: mailhog
@@ -26,10 +24,6 @@ services:
 proxy:
   appserver:
     - taoacr.lndo.site
-    - taoacrenespanol.lndo.site
-    - taoacrinfrench.lndo.site
-    - espanol.taoacr.lndo.site
-    - french.taoacr.lndo.site
     - site-builder.lndo.site
   mailhog:
     - mailhog.taoacr.lndo.site

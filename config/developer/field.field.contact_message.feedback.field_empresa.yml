@@ -1,0 +1,19 @@
+uuid: e01df357-ae91-4e37-8737-518d4736a614
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.storage.contact_message.field_empresa
+id: contact_message.feedback.field_empresa
+field_name: field_empresa
+entity_type: contact_message
+bundle: feedback
+label: Empresa
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

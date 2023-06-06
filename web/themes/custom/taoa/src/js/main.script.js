@@ -44,6 +44,7 @@ import { Toast, Tooltip } from './_bootstrap';
 
   Drupal.behaviors.addWorkSampleAndWorkTypesInteractionREST = {
     attach: function (context, settings) {
+      return;
       once('work-sample-work-type-rest-init', '.view-work-types .taxonomy-term.work-type', document).forEach(t => {
         t.addEventListener('click', e => {
           const term = t.getAttribute('data-taxonomy');

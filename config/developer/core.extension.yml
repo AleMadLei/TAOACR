@@ -36,8 +36,11 @@ module:
   path: 0
   path_alias: 0
   responsive_image: 0
+  rest: 0
+  serialization: 0
   shortcut: 0
   system: 0
+  taoacr_global: 0
   taxonomy: 0
   text: 0
   toolbar: 0
