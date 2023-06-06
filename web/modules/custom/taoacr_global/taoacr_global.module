@@ -1,0 +1,12 @@
+<?php
+
+use Drupal\node\Entity\Node;
+
+function x(){
+
+  \Drupal::service('entity_type.manager');
+  Node::load(23);
+  \Drupal::entityTypeManager()->getStorage('node')->load(23);
+
+}
+

@@ -1,0 +1,7 @@
+block.settings.taoacr_global_contact_form:
+  type: block_settings
+  label: 'Contact Form block'
+  mapping:
+    example:
+      type: string
+      label: Example

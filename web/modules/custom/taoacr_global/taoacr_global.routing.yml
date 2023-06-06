@@ -1,0 +1,10 @@
+taoacr_global.work_samples:
+  path: /api/work-samples/{term}
+  defaults:
+    _controller: '\Drupal\taoacr_global\Controller\WorkSamplesController::build'
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      term:
+        type: entity:taxonomy_term

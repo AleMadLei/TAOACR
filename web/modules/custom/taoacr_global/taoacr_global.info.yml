@@ -1,0 +1,6 @@
+type: module
+core_version_requirement: ^10
+name: TAOACR Global
+description: Modulo de ayuda para funcionalidad a la medida
+dependencies:
+  - drupal:views
