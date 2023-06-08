@@ -1,0 +1,8 @@
+uuid: 78aa8d3d-b795-480f-9c7d-f9efee14bb6d
+langcode: en
+status: true
+dependencies: {  }
+id: review
+label: Review
+target_entity_type_id: node
+description: 'Product review'

@@ -1,0 +1,7 @@
+dev:
+  root: /app/web
+  uri: taoacr.lndo.site
+
+sb:
+  root: /app/web
+  uri: site-builder.lndo.site

@@ -1,0 +1,21 @@
+uuid: a47df5da-ff50-4d0f-94c0-11b7a0bc7edc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sample
+    - node.type.product
+  module:
+    - text
+id: node.product.field_sample
+field_name: field_sample
+entity_type: node
+bundle: product
+label: Sample
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

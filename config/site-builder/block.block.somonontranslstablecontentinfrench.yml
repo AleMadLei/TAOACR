@@ -1,0 +1,33 @@
+uuid: 9db7079f-6c5d-40af-9c3d-132d306b844b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7175626f-b667-4e53-9e78-b5639d4ea023'
+  module:
+    - block_content
+    - language
+  theme:
+    - olivero
+id: somonontranslstablecontentinfrench
+theme: olivero
+region: content_above
+weight: 0
+provider: null
+plugin: 'block_content:7175626f-b667-4e53-9e78-b5639d4ea023'
+settings:
+  id: 'block_content:7175626f-b667-4e53-9e78-b5639d4ea023'
+  label: 'Somo non translstable content in French'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      fr: fr

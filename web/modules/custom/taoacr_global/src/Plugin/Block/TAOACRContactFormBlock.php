@@ -20,12 +20,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 final class TAOACRContactFormBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
-  private readonly EntityTypeManagerInterface $entityTypeManager;
-
   /**
    * Constructs the plugin instance.
    */
-  /*
   public function __construct(
     array $configuration,
     $plugin_id,
@@ -34,23 +31,17 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
-  /*
 
   /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): self {
-    /*
     return new self(
       $configuration,
       $plugin_id,
       $plugin_definition,
       $container->get('entity_type.manager'),
     );
-    */
-    $new = new self($configuration, $plugin_id, $plugin_definition);
-    $new->entityTypeManager = $container->get('entity_type.manager');
-
   }
 
   /**
@@ -86,7 +77,7 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
    */
   public function build(): array {
     $build['content'] = [
-      '#markup' => $this->t('It works!'),
+      '#markup' => $this->configuration['example'],
     ];
     return $build;
   }

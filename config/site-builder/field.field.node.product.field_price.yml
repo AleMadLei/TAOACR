@@ -1,0 +1,23 @@
+uuid: 70c6008e-3e68-4ec1-b618-32a402ee3714
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.product
+id: node.product.field_price
+field_name: field_price
+entity_type: node
+bundle: product
+label: Price
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 5.0
+  max: 999.99
+  prefix: $
+  suffix: ''
+field_type: decimal

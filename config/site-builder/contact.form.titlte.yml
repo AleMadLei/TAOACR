@@ -1,0 +1,13 @@
+uuid: 26549d53-bf90-4cbb-bc82-cd742a01e800
+langcode: en
+status: true
+dependencies: {  }
+id: titlte
+label: Titlte
+recipients:
+  - a@b.com
+  - c@d.com
+reply: ''
+weight: 0
+message: thankyou
+redirect: /

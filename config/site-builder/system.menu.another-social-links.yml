@@ -1,0 +1,8 @@
+uuid: 07d8f51c-ea22-4e4b-afe7-2e0bbe9c3d20
+langcode: en
+status: true
+dependencies: {  }
+id: another-social-links
+label: 'Another social links'
+description: ''
+locked: false

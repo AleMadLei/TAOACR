@@ -1,0 +1,21 @@
+uuid: ab684b86-6acd-4c7e-83b6-e42c51f86c65
+langcode: en
+status: true
+dependencies: {  }
+name: reduced_product_image
+label: 'Reduced Product Image'
+effects:
+  09209fe9-f3da-42fe-9adf-8393b4fd9d14:
+    uuid: 09209fe9-f3da-42fe-9adf-8393b4fd9d14
+    id: image_scale
+    weight: 1
+    data:
+      width: 250
+      height: null
+      upscale: false
+  3f3ae50a-d30d-43e3-9633-2abdaad18878:
+    uuid: 3f3ae50a-d30d-43e3-9633-2abdaad18878
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

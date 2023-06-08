@@ -1,0 +1,21 @@
+uuid: da490653-52a0-4462-af00-eaf38a764b9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.storage.contact_message.field_technology
+  module:
+    - options
+id: contact_message.personal.field_technology
+field_name: field_technology
+entity_type: contact_message
+bundle: personal
+label: technology
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

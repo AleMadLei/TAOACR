@@ -1,0 +1,25 @@
+uuid: bb73b931-6fc6-45b4-aadb-93f872af684f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.another-social-links
+  module:
+    - system
+  theme:
+    - olivero
+id: anothersociallinks
+theme: olivero
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:another-social-links'
+settings:
+  id: 'system_menu_block:another-social-links'
+  label: 'Another social links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

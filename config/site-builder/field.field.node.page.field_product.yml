@@ -1,0 +1,25 @@
+uuid: 42e294bd-ffe5-4bf2-987a-fc20a422decd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product
+    - node.type.page
+id: node.page.field_product
+field_name: field_product
+entity_type: node
+bundle: page
+label: Product
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: content
+      display_name: entity_reference_department_product
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,39 @@
+uuid: 27ec1af8-fcd2-4025-bd77-2d76bfad0e5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_technology
+field_name: field_technology
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: PHP
+      label: PHP
+    -
+      value: LARAVEL
+      label: LARAVEL
+    -
+      value: JAVA
+      label: JAVA
+    -
+      value: .NET
+      label: .NET
+    -
+      value: DJANGO
+      label: DJANGO
+    -
+      value: PYTHON
+      label: PYTHON
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 1228a2d7-750f-4636-97a7-9ab761b31b7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.review
+    - field.storage.comment.field_rating
+  module:
+    - options
+id: comment.review.field_rating
+field_name: field_rating
+entity_type: comment
+bundle: review
+label: Rating
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

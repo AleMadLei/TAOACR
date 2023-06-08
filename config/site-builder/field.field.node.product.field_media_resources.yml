@@ -1,0 +1,31 @@
+uuid: 1c62d2ec-4d99-41e7-88b8-c0d930b772dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_resources
+    - media.type.image
+    - media.type.video
+    - node.type.product
+id: node.product.field_media_resources
+field_name: field_media_resources
+entity_type: node
+bundle: product
+label: 'Media Resources'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference
