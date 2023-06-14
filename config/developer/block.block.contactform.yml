@@ -1,0 +1,22 @@
+uuid: 4861e1fe-6c08-416a-99ea-3603a10ea295
+langcode: en
+status: true
+dependencies:
+  module:
+    - taoacr_global
+  theme:
+    - taoa
+id: contactform
+theme: taoa
+region: content
+weight: 0
+provider: null
+plugin: taoacr_global_contact_form
+settings:
+  id: taoacr_global_contact_form
+  label: 'Contact Form'
+  label_display: visible
+  provider: taoacr_global
+  example: null
+  contact_form: feedback
+visibility: {  }
