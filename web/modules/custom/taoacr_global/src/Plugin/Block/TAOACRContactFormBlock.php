@@ -2,11 +2,12 @@
 
 namespace Drupal\taoacr_global\Plugin\Block;
 
+use Drupal\contact\ContactFormInterface;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Entity\EntityFormBuilderInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\migrate\Plugin\migrate\destination\Entity;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -28,6 +29,7 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
     $plugin_id,
     $plugin_definition,
     private readonly EntityTypeManagerInterface $entityTypeManager,
+    private readonly EntityFormBuilderInterface $entityFormBuilder,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
@@ -41,6 +43,7 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
       $plugin_id,
       $plugin_definition,
       $container->get('entity_type.manager'),
+      $container->get('entity.form_builder'),
     );
   }
 
@@ -49,7 +52,7 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
    */
   public function defaultConfiguration(): array {
     return [
-      'example' => $this->t('Hello world!'),
+      'contact_form' => '',
     ];
   }
 
@@ -57,10 +60,18 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state): array {
-    $form['example'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Example'),
-      '#default_value' => $this->configuration['example'],
+    $forms = $this
+      ->entityTypeManager
+      ->getStorage('contact_form')
+      ->loadMultiple();
+
+    $form['contact_form'] = [
+      '#empty_option' => $this->t('- Select a Contact Form -'),
+      '#default_value' => $this->configuration['contact_form'],
+      '#options' => array_map(fn (ContactFormInterface $a) => $a->label(), $forms),
+      '#required' => TRUE,
+      '#title' => $this->t('Contact form'),
+      '#type' => 'select',
     ];
     return $form;
   }
@@ -69,15 +80,24 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
    * {@inheritdoc}
    */
   public function blockSubmit($form, FormStateInterface $form_state): void {
-    $this->configuration['example'] = $form_state->getValue('example');
+    $this->configuration['contact_form'] = $form_state->getValue('contact_form');
   }
 
   /**
    * {@inheritdoc}
    */
   public function build(): array {
+    $form = $this
+      ->entityTypeManager
+      ->getStorage('contact_form')
+      ->load($this->configuration['contact_form']);
+
+    $contact_message = $this->entityTypeManager
+      ->getStorage('contact_message')
+      ->create(['contact_form' => $form->id()]);
+
     $build['content'] = [
-      '#markup' => $this->configuration['example'],
+      'contact_form' => $this->entityFormBuilder->getForm($contact_message),
     ];
     return $build;
   }
