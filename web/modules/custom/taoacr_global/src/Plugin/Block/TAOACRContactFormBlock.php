@@ -7,6 +7,7 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityFormBuilderInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Logger\LoggerChannel;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -30,6 +31,7 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
     $plugin_definition,
     private readonly EntityTypeManagerInterface $entityTypeManager,
     private readonly EntityFormBuilderInterface $entityFormBuilder,
+    private readonly LoggerChannel $logger,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
@@ -44,6 +46,7 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
       $plugin_definition,
       $container->get('entity_type.manager'),
       $container->get('entity.form_builder'),
+      $container->get('logger.factory')->get('taoacr_global')
     );
   }
 
@@ -91,6 +94,12 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
       ->entityTypeManager
       ->getStorage('contact_form')
       ->load($this->configuration['contact_form']);
+
+    if (empty($form)) {
+      $this->logger->error('Form "@form" is not available.', ['@form' => $this->configuration['contact_form']]);
+      $this->messenger()->addError($this->t('Form "@form" is not available.', ['@form' => $this->configuration['contact_form']]));
+      return [];
+    }
 
     $contact_message = $this->entityTypeManager
       ->getStorage('contact_message')
