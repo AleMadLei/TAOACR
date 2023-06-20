@@ -10,6 +10,7 @@ module:
   ckeditor5: 0
   config: 0
   contact: 0
+  contact_block: 0
   contextual: 0
   datetime: 0
   dblog: 0
@@ -29,6 +30,7 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  modulo_y: 0
   mysql: 0
   node: 0
   options: 0
