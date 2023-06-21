@@ -1,0 +1,6 @@
+type: module
+core_version_requirement: ^10
+name: Modulo Y
+description: Alter de ruta
+dependencies:
+  - taoacr_global:taoacr_global

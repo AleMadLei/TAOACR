@@ -10,3 +10,8 @@ function x(){
 
 }
 
+function taoacr_global_modulo_y_mi_hook(array &$content) {
+  $content['wada'] = [
+    '#markup' => 'faq',
+  ];
+}

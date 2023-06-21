@@ -1,0 +1,5 @@
+services:
+  taoacr_global.event_subscriber:
+    class: Drupal\taoacr_global\EventSubscriber\ModuloYEventSubscriber
+    tags:
+      - { name: event_subscriber }

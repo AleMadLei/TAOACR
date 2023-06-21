@@ -1,0 +1,7 @@
+prueba_modificable:
+  path: '/modulo-y/prueba-modificable'
+  defaults:
+    _title: 'Prueba Modificable'
+    _controller: '\Drupal\modulo_y\Controller\ModuloYController'
+  requirements:
+    _permission: 'access content'
