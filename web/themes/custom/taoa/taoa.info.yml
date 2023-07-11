@@ -21,3 +21,8 @@ libraries-extend:
     - taoa/progress
 core_version_requirement: ^10
 generator: 'starterkit_theme:10.0.4'
+
+components:
+  namespaces:
+    taoa:
+      - src/components

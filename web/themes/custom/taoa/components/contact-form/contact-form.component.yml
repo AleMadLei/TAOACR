@@ -1,0 +1,14 @@
+name: Contact Form
+props:
+  type: object
+  required:
+    - title
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The block title
+slots:
+  the_form:
+    title: Form
+    description: The form to display in this block

@@ -17,9 +17,12 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.3",
+        "drupal/components": "^3.0@beta",
+        "drupal/contact_block": "^2.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/devel": "^5.1",
         "drupal/views_infinite_scroll": "^2.0",
         "drush/drush": "^12.0"
     },

@@ -105,7 +105,7 @@ final class TAOACRContactFormBlock extends BlockBase implements ContainerFactory
       ->getStorage('contact_message')
       ->create(['contact_form' => $form->id()]);
 
-    $build['content'] = [
+    $build = [
       'contact_form' => $this->entityFormBuilder->getForm($contact_message),
     ];
     return $build;
