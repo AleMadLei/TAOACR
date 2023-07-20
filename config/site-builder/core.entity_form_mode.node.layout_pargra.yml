@@ -1,0 +1,10 @@
+uuid: c14d3088-72de-4454-b432-4804207346e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.layout_pargra
+label: 'Layout Paragraphs Editing'
+targetEntityType: node
+cache: true

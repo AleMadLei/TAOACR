@@ -1,0 +1,20 @@
+uuid: b49e14db-5bdf-442a-8ba8-122a1fe04bb9
+langcode: es
+status: true
+dependencies:
+  theme:
+    - sb_testing
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: sb_testing_primary_admin_actions
+theme: sb_testing
+region: header
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

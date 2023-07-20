@@ -11,20 +11,20 @@ dependencies:
 _core:
   default_config_hash: diywn6VdMoQOlDA-xslKdKrDko3SsTKfaK3WBG45UAg
 id: media
-label: Multimedia
+label: Media
 module: views
-description: 'Buscar y administrar medios.'
+description: 'Find and manage media.'
 tag: ''
 base_table: media_field_data
 base_field: mid
 display:
   default:
     id: default
-    display_title: 'Por defecto'
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: Multimedia
+      title: Media
       fields:
         media_bulk_form:
           id: media_bulk_form
@@ -76,7 +76,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Acción
+          action_title: Action
           include_exclude: exclude
           selected_actions: {  }
         thumbnail__target_id:
@@ -89,7 +89,7 @@ display:
           entity_type: media
           entity_field: thumbnail
           plugin_id: field
-          label: Miniatura
+          label: Thumbnail
           exclude: false
           alter:
             alter_text: false
@@ -157,7 +157,7 @@ display:
           entity_type: media
           entity_field: media
           plugin_id: field
-          label: 'Nombre del elemento multimedia'
+          label: 'Media name'
           exclude: false
           alter:
             alter_text: false
@@ -204,7 +204,7 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: field
-          label: Tipo
+          label: Type
           exclude: false
           alter:
             alter_text: false
@@ -269,7 +269,7 @@ display:
           entity_type: media
           entity_field: uid
           plugin_id: field
-          label: Autor
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -334,7 +334,7 @@ display:
           entity_type: media
           entity_field: status
           plugin_id: field
-          label: Estado
+          label: Status
           exclude: false
           alter:
             alter_text: false
@@ -379,8 +379,8 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_false: 'Sin publicar'
-            format_custom_true: Publicado
+            format_custom_false: Unpublished
+            format_custom_true: Published
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -401,7 +401,7 @@ display:
           entity_type: media
           entity_field: changed
           plugin_id: field
-          label: Actualizado
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -448,6 +448,15 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -467,7 +476,7 @@ display:
           admin_label: ''
           entity_type: media
           plugin_id: entity_operations
-          label: Operaciones
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -517,26 +526,26 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: 'Siguiente >'
-            previous: '‹ Anterior'
-            first: '« Primero'
-            last: 'Último »'
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Elementos por página'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Todo -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Desplazamiento
+            offset_label: Offset
           quantity: 9
       exposed_form:
         type: basic
         options:
-          submit_button: Filtro
+          submit_button: Filter
           reset_button: false
-          reset_button_label: Restablecer
-          exposed_sorts_label: 'Ordenar por'
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -557,7 +566,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No hay medios disponibles.'
+          content: 'No media available.'
           tokenize: false
       sorts:
         created:
@@ -594,7 +603,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: 'Nombre del elemento multimedia'
+            label: 'Media name'
             description: ''
             use_operator: false
             operator: name_op
@@ -636,7 +645,7 @@ display:
           exposed: true
           expose:
             operator_id: bundle_op
-            label: Tipo
+            label: Type
             description: ''
             use_operator: false
             operator: bundle_op
@@ -679,7 +688,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Verdad
+            label: 'True'
             description: null
             use_operator: false
             operator: status_op
@@ -693,7 +702,7 @@ display:
               authenticated: authenticated
           is_grouped: true
           group_info:
-            label: 'Estado de publicación'
+            label: 'Published status'
             description: ''
             identifier: status
             optional: true
@@ -704,11 +713,11 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Publicado
+                title: Published
                 operator: '='
                 value: '1'
               2:
-                title: 'Sin publicar'
+                title: Unpublished
                 operator: '='
                 value: '0'
         status_extra:
@@ -766,7 +775,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Idioma
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op
@@ -882,7 +891,7 @@ display:
       tags: {  }
   media_page_list:
     id: media_page_list
-    display_title: Multimedia
+    display_title: Media
     display_plugin: page
     position: 1
     display_options:
@@ -891,7 +900,7 @@ display:
       path: admin/content/media
       menu:
         type: tab
-        title: Multimedia
+        title: Media
         description: ''
         weight: 0
         expanded: false

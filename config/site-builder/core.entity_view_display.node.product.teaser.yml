@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.product.field_review
     - field.field.node.product.field_sample
     - field.field.node.product.field_sku
+    - field.field.node.product.field_work_type
     - image.style.reduced_product_image
     - node.type.product
   module:
@@ -54,5 +55,6 @@ hidden:
   field_review: true
   field_sample: true
   field_sku: true
+  field_work_type: true
   langcode: true
   links: true

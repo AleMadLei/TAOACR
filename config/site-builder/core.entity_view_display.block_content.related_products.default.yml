@@ -1,0 +1,13 @@
+uuid: d8f9864e-3e3d-40bc-8ac1-a05000752ad0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.related_products
+id: block_content.related_products.default
+targetEntityType: block_content
+bundle: related_products
+mode: default
+content: {  }
+hidden:
+  langcode: true

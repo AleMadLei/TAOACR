@@ -1,0 +1,25 @@
+uuid: 4e9adcc4-ecdc-4452-89fa-ca95a21f4a30
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.another-social-links
+  module:
+    - system
+  theme:
+    - sb_testing
+id: sb_testing_anothersociallinks
+theme: sb_testing
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:another-social-links'
+settings:
+  id: 'system_menu_block:another-social-links'
+  label: 'Another social links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

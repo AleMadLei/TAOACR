@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
   module:
     - contact
+    - file
     - filter
     - media
     - shortcut
@@ -13,12 +14,13 @@ dependencies:
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
-label: 'Usuario autenticado'
+label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'delete own files'
   - 'use text format basic_html'
   - 'view media'

@@ -1,0 +1,22 @@
+uuid: 99b5f307-de10-4871-a1c5-e7f77509effc
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sb_testing
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: sb_testing_content
+theme: sb_testing
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

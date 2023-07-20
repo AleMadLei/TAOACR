@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.product.field_review
     - field.field.node.product.field_sample
     - field.field.node.product.field_sku
+    - field.field.node.product.field_work_type
     - node.type.product
   module:
     - comment
@@ -76,6 +77,16 @@ content:
     weight: 2
     region: content
     settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_work_type:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }

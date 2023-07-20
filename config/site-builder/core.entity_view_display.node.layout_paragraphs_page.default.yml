@@ -1,0 +1,29 @@
+uuid: b49c6222-66af-430c-b3ee-3cbe6d28cc6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.layout_paragraphs_page.body
+    - field.field.node.layout_paragraphs_page.field_components
+    - node.type.layout_paragraphs_page
+  module:
+    - layout_paragraphs
+    - user
+id: node.layout_paragraphs_page.default
+targetEntityType: node
+bundle: layout_paragraphs_page
+mode: default
+content:
+  field_components:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  langcode: true
+  links: true

@@ -1,0 +1,17 @@
+uuid: d14b40d1-22f9-4568-ab29-da90e2a07347
+langcode: en
+status: true
+dependencies:
+  module:
+    - condition_query
+id: layout_paragraphs_editiing
+label: 'Layout paragraphs editiing'
+weight: 0
+theme: olivero
+admin_theme: olivero
+conjunction: and
+visibility:
+  request_param:
+    id: request_param
+    request_param: display=layout_pargra
+    negate: false

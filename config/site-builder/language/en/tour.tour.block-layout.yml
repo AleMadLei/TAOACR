@@ -1,5 +1,7 @@
-label: 'Block Layout Page'
 tips:
+  custom-block-library:
+    label: 'Custom Block Library'
+    body: 'The block management screen also has an another tab on the top which is used to add Custom blocks. The name of the tab is "Custom block library". This tab ultimately provides a link to add custom blocks.'
   block-layout:
     label: 'Block Layout'
     body: 'Blocks are boxes of content rendered into an area, or region, of a web page that can be displayed in regions (such as footer or sidebar) on your page.'
@@ -12,6 +14,4 @@ tips:
   configure-block:
     label: 'Configure Block'
     body: 'By Clicking on "Configure" you can go ahead and edit the contents of the block, deal with the visibility settings and even change the placement of where it is on your theme.'
-  custom-block-library:
-    label: 'Custom Block Library'
-    body: 'The block management screen also has an another tab on the top which is used to add Custom blocks. The name of the tab is "Custom block library". This tab ultimately provides a link to add custom blocks.'
+label: 'Block Layout Page'

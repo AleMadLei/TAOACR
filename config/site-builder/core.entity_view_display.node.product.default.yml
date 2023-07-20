@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.product.field_review
     - field.field.node.product.field_sample
     - field.field.node.product.field_sku
+    - field.field.node.product.field_work_type
     - node.type.product
   module:
     - comment
@@ -79,6 +80,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_work_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
     region: content
 hidden:
   langcode: true

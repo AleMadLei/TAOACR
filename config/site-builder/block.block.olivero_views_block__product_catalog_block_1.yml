@@ -1,0 +1,25 @@
+uuid: bf3f58e9-3547-4a84-b991-f8fff306246f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product_catalog
+  module:
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__product_catalog_block_1
+theme: olivero
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:product_catalog-block_1'
+settings:
+  id: 'views_block:product_catalog-block_1'
+  label: 'Related Products'
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: 'Related Products'
+  items_per_page: none
+visibility: {  }

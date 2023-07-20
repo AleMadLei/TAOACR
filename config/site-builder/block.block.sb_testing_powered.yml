@@ -1,0 +1,22 @@
+uuid: 2e720969-3335-4fc4-a810-9a5f44666906
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sb_testing
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: sb_testing_powered
+theme: sb_testing
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

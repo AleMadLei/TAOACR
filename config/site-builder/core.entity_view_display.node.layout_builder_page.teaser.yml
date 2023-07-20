@@ -1,0 +1,42 @@
+uuid: 3de813d4-5129-49ad-abe5-3e1ff022d990
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.layout_builder_page.body
+    - field.field.node.layout_builder_page.field_banner_image
+    - field.field.node.layout_builder_page.layout_builder__layout
+    - node.type.layout_builder_page
+  module:
+    - text
+    - user
+id: node.layout_builder_page.teaser
+targetEntityType: node
+bundle: layout_builder_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_banner_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true

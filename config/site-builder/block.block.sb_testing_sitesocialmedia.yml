@@ -1,0 +1,25 @@
+uuid: bf80e31c-241b-4d2c-bfa9-7b4bdaa5eb5b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_links:d2ed4c2b-5c40-44aa-9e6e-650d063caabc'
+  module:
+    - block_content
+  theme:
+    - sb_testing
+id: sb_testing_sitesocialmedia
+theme: sb_testing
+region: header
+weight: -5
+provider: null
+plugin: 'block_content:d2ed4c2b-5c40-44aa-9e6e-650d063caabc'
+settings:
+  id: 'block_content:d2ed4c2b-5c40-44aa-9e6e-650d063caabc'
+  label: 'Site Social Media'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

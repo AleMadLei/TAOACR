@@ -1,0 +1,22 @@
+uuid: 11182d10-8de6-4089-a39e-9e47a5b429a6
+langcode: es
+status: true
+dependencies:
+  theme:
+    - sb_testing
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: sb_testing_primary_local_tasks
+theme: sb_testing
+region: header
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

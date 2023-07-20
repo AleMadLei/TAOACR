@@ -1,0 +1,8 @@
+uuid: e75866db-671b-4a9a-9e9d-eab3a25664b2
+langcode: en
+status: true
+dependencies: {  }
+id: related_products
+label: 'Related Products'
+revision: 0
+description: 'Display products from the same product category of the product being viewed.'
